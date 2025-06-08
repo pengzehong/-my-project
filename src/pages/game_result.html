@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏结果 - 少儿学习单词APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <style>
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+        .bounce {
+            animation: bounce 2s ease infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .spin {
+            animation: spin 8s linear infinite;
+        }
+        
+        @keyframes scale {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        .scale {
+            animation: scale 2s ease-in-out infinite;
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            opacity: 0.7;
+        }
+        .confetti-1 {
+            background-color: #FF6B6B;
+            top: 10%;
+            left: 10%;
+        }
+        .confetti-2 {
+            background-color: #4ECDC4;
+            top: 20%;
+            left: 80%;
+            transform: rotate(30deg);
+        }
+        .confetti-3 {
+            background-color: #FFD166;
+            top: 30%;
+            left: 30%;
+            transform: rotate(60deg);
+        }
+        .confetti-4 {
+            background-color: #FF6B6B;
+            top: 40%;
+            left: 70%;
+            transform: rotate(90deg);
+        }
+        .confetti-5 {
+            background-color: #4ECDC4;
+            top: 50%;
+            left: 20%;
+            transform: rotate(120deg);
+        }
+        .confetti-6 {
+            background-color: #FFD166;
+            top: 60%;
+            left: 60%;
+            transform: rotate(150deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 h-screen">
+    <div class="page-container">
+        <!-- 顶部状态栏 -->
+        <iframe src="components/status_bar.html" class="w-full border-none" style="height: 35px;"></iframe>
+        
+        <!-- 彩色碎屑 -->
+        <div class="confetti confetti-1 bounce"></div>
+        <div class="confetti confetti-2 bounce"></div>
+        <div class="confetti confetti-3 bounce"></div>
+        <div class="confetti confetti-4 bounce"></div>
+        <div class="confetti confetti-5 bounce"></div>
+        <div class="confetti confetti-6 bounce"></div>
+        
+        <div class="page-content px-5 py-10 relative overflow-hidden">
+            <!-- 头部成功标志 -->
+            <div class="flex flex-col items-center mb-8">
+                <div class="w-28 h-28 bg-gradient-to-b from-yellow-400 to-yellow-500 rounded-full flex items-center justify-center mb-4 scale">
+                    <div class="w-24 h-24 bg-yellow-300 rounded-full flex items-center justify-center">
+                        <i class="fas fa-trophy text-5xl text-yellow-600"></i>
+                    </div>
+                </div>
+                
+                <h1 class="text-2xl font-bold text-center mb-2">恭喜完成!</h1>
+                <p class="text-gray-600 text-center">你成功完成了单词配对游戏</p>
+            </div>
+            
+            <!-- 成绩展示 -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm mb-8">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4">游戏成绩</h2>
+                
+                <div class="flex justify-between items-center mb-5">
+                    <div class="text-center">
+                        <p class="text-3xl font-bold text-pink-500 mb-1">12</p>
+                        <p class="text-xs text-gray-500">总步数</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-3xl font-bold text-blue-500 mb-1">42 秒</p>
+                        <p class="text-xs text-gray-500">耗时</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="flex justify-center text-yellow-500">
+                            <i class="fas fa-star text-2xl"></i>
+                            <i class="fas fa-star text-2xl"></i>
+                            <i class="fas fa-star text-2xl"></i>
+                        </div>
+                        <p class="text-xs text-gray-500">评分</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                    <div class="flex justify-between items-center">
+                        <p class="font-medium text-gray-700">已掌握单词</p>
+                        <p class="font-semibold text-blue-600">3/3</p>
+                    </div>
+                    <div class="mt-3 space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Dog</span>
+                            <i class="fas fa-check-circle text-green-500"></i>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Cat</span>
+                            <i class="fas fa-check-circle text-green-500"></i>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Panda</span>
+                            <i class="fas fa-check-circle text-green-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 获得奖励 -->
+            <div class="bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl p-6 text-white mb-8">
+                <h2 class="text-lg font-semibold mb-4 flex items-center">
+                    <i class="fas fa-gift mr-2"></i>
+                    获得奖励
+                </h2>
+                
+                <div class="flex justify-center mb-4">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-star text-yellow-300 text-3xl"></i>
+                    </div>
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                        <i class="fas fa-medal text-yellow-300 text-3xl"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-xl p-4 text-center">
+                    <div class="flex justify-center">
+                        <div class="w-16 h-16 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                            <span class="text-3xl font-bold">+5</span>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-white text-opacity-90">金星</p>
+                </div>
+            </div>
+            
+            <!-- 操作按钮 -->
+            <div class="flex flex-col gap-3">
+                <button class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-3 rounded-xl font-semibold">
+                    <i class="fas fa-forward mr-2"></i>
+                    下一关
+                </button>
+                
+                <div class="grid grid-cols-2 gap-3">
+                    <button class="bg-white text-gray-700 py-3 rounded-xl font-medium">
+                        <i class="fas fa-redo mr-2"></i>
+                        再玩一次
+                    </button>
+                    
+                    <a href="games.html" class="bg-white text-gray-700 py-3 rounded-xl font-medium text-center">
+                        <i class="fas fa-th-large mr-2"></i>
+                        其他游戏
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部导航栏 -->
+        <iframe src="components/bottom_nav.html?page=games" class="w-full border-none fixed bottom-0 left-0 right-0" style="height: 95px; z-index: 50;"></iframe>
+    </div>
+</body>
+</html> 

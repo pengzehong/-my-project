@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/custom.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+<!-- 底部导航栏组件 -->
+<div class="fixed bottom-0 left-0 right-0 bottom-nav flex justify-around items-center py-3 px-4 z-50">
+    <a href="../home.html" id="nav-home" class="nav-item flex flex-col items-center py-1">
+        <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-500 nav-icon-container">
+            <i class="fas fa-home text-xl"></i>
+        </div>
+        <span class="text-xs mt-1.5 font-medium text-gray-600">首页</span>
+    </a>
+    
+    <a href="../vocabulary.html" id="nav-vocabulary" class="nav-item flex flex-col items-center py-1">
+        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 nav-icon-container">
+            <i class="fas fa-book text-xl"></i>
+        </div>
+        <span class="text-xs mt-1.5 font-medium text-gray-600">词库</span>
+    </a>
+    
+    <a href="../games.html" id="nav-games" class="nav-item flex flex-col items-center py-1">
+        <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-500 nav-icon-container">
+            <i class="fas fa-gamepad text-xl"></i>
+        </div>
+        <span class="text-xs mt-1.5 font-medium text-gray-600">游戏</span>
+    </a>
+    
+    <a href="../progress.html" id="nav-progress" class="nav-item flex flex-col items-center py-1">
+        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-500 nav-icon-container">
+            <i class="fas fa-chart-line text-xl"></i>
+        </div>
+        <span class="text-xs mt-1.5 font-medium text-gray-600">进度</span>
+    </a>
+    
+    <a href="../me.html" id="nav-me" class="nav-item flex flex-col items-center py-1">
+        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-500 nav-icon-container">
+            <i class="fas fa-user text-xl"></i>
+        </div>
+        <span class="text-xs mt-1.5 font-medium text-gray-600">我的</span>
+    </a>
+    
+    <!-- iPhone底部横条 -->
+    <div class="absolute bottom-0 left-0 right-0 flex justify-center pb-1">
+        <div class="iphone-home-indicator"></div>
+    </div>
+</div>
+
+<script>
+    // 获取当前页面参数
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = urlParams.get('page');
+    
+    // 根据页面参数设置活跃项
+    if (page) {
+        const navItem = document.getElementById('nav-' + page);
+        if (navItem) {
+            navItem.classList.add('active');
+        }
+    } else {
+        // 默认首页为活跃项
+        document.getElementById('nav-home').classList.add('active');
+    }
+    
+    // 添加点击效果
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // 移除所有活跃状态
+            navItems.forEach(i => i.classList.remove('active'));
+            // 设置当前项为活跃
+            this.classList.add('active');
+        });
+    });
+</script>
+</body>
+</html> 

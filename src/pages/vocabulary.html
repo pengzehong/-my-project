@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>词库 - 少儿学习单词APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 h-screen">
+    <div class="page-container">
+        <!-- 顶部状态栏 -->
+        <iframe src="components/status_bar.html" class="w-full border-none" style="height: 35px;"></iframe>
+        
+        <!-- 头部搜索区 -->
+        <div class="px-5 pt-3 pb-5 bg-white shadow-sm">
+            <h1 class="text-2xl font-bold text-gray-800 mb-4">词库</h1>
+            
+            <!-- 搜索框 -->
+            <div class="relative">
+                <input type="text" placeholder="搜索单词..." class="w-full bg-gray-100 rounded-full py-3 pl-12 pr-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-300">
+                <div class="absolute left-4 top-3 text-gray-400">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <!-- 分类标签 -->
+            <div class="flex overflow-x-auto py-3 -mx-4 px-4 space-x-2 mb-4">
+                <button class="bg-pink-500 text-white rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap flex-shrink-0">所有</button>
+                <button class="bg-white text-gray-700 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap shadow-sm flex-shrink-0">动物</button>
+                <button class="bg-white text-gray-700 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap shadow-sm flex-shrink-0">水果</button>
+                <button class="bg-white text-gray-700 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap shadow-sm flex-shrink-0">颜色</button>
+                <button class="bg-white text-gray-700 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap shadow-sm flex-shrink-0">数字</button>
+                <button class="bg-white text-gray-700 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap shadow-sm flex-shrink-0">交通</button>
+                <button class="bg-white text-gray-700 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap shadow-sm flex-shrink-0">学校</button>
+            </div>
+            
+            <!-- 单词集合 -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-gray-800">动物单词</h2>
+                    <a href="#" class="text-pink-500 text-sm font-medium">全部</a>
+                </div>
+                
+                <!-- 单词列表 -->
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3">
+                            <img src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-16 h-16 object-cover rounded-xl" alt="Dog">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Dog</h3>
+                            <p class="text-xs text-gray-500">狗</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-green-100 text-green-600 rounded-full">已学</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3">
+                            <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-16 h-16 object-cover rounded-xl" alt="Cat">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Cat</h3>
+                            <p class="text-xs text-gray-500">猫</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-green-100 text-green-600 rounded-full">已学</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3">
+                            <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-16 h-16 object-cover rounded-xl" alt="Panda">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Panda</h3>
+                            <p class="text-xs text-gray-500">熊猫</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-green-100 text-green-600 rounded-full">已学</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3">
+                            <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-16 h-16 object-cover rounded-xl" alt="Tiger">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Tiger</h3>
+                            <p class="text-xs text-gray-500">老虎</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-blue-100 text-blue-600 rounded-full">新词</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 水果单词集合 -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-gray-800">水果单词</h2>
+                    <a href="#" class="text-pink-500 text-sm font-medium">全部</a>
+                </div>
+                
+                <!-- 单词列表 -->
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3">
+                            <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-16 h-16 object-cover rounded-xl" alt="Apple">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Apple</h3>
+                            <p class="text-xs text-gray-500">苹果</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-green-100 text-green-600 rounded-full">已学</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3">
+                            <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-16 h-16 object-cover rounded-xl" alt="Banana">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Banana</h3>
+                            <p class="text-xs text-gray-500">香蕉</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-green-100 text-green-600 rounded-full">已学</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3">
+                            <img src="https://images.unsplash.com/photo-1582979512210-99b6a53386f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-16 h-16 object-cover rounded-xl" alt="Orange">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Orange</h3>
+                            <p class="text-xs text-gray-500">橙子</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-blue-100 text-blue-600 rounded-full">新词</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3">
+                            <img src="https://images.unsplash.com/photo-1587132137056-bfbf0166836e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-16 h-16 object-cover rounded-xl" alt="Strawberry">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Strawberry</h3>
+                            <p class="text-xs text-gray-500">草莓</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-blue-100 text-blue-600 rounded-full">新词</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 颜色单词集合 -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-gray-800">颜色单词</h2>
+                    <a href="#" class="text-pink-500 text-sm font-medium">全部</a>
+                </div>
+                
+                <!-- 单词列表 -->
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3 w-16 h-16 rounded-xl bg-red-500"></div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Red</h3>
+                            <p class="text-xs text-gray-500">红色</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-green-100 text-green-600 rounded-full">已学</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3 w-16 h-16 rounded-xl bg-blue-500"></div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Blue</h3>
+                            <p class="text-xs text-gray-500">蓝色</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-green-100 text-green-600 rounded-full">已学</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3 w-16 h-16 rounded-xl bg-yellow-500"></div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Yellow</h3>
+                            <p class="text-xs text-gray-500">黄色</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-green-100 text-green-600 rounded-full">已学</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3 w-16 h-16 rounded-xl bg-green-500"></div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Green</h3>
+                            <p class="text-xs text-gray-500">绿色</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-blue-100 text-blue-600 rounded-full">新词</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 数字单词集合 -->
+            <div class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-lg font-bold text-gray-800">数字单词</h2>
+                    <a href="#" class="text-pink-500 text-sm font-medium">全部</a>
+                </div>
+                
+                <!-- 单词列表 -->
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3 w-16 h-16 rounded-xl bg-pink-100 flex items-center justify-center">
+                            <span class="text-3xl font-bold text-pink-500">1</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">One</h3>
+                            <p class="text-xs text-gray-500">一</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-green-100 text-green-600 rounded-full">已学</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3 w-16 h-16 rounded-xl bg-blue-100 flex items-center justify-center">
+                            <span class="text-3xl font-bold text-blue-500">2</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Two</h3>
+                            <p class="text-xs text-gray-500">二</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-green-100 text-green-600 rounded-full">已学</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3 w-16 h-16 rounded-xl bg-purple-100 flex items-center justify-center">
+                            <span class="text-3xl font-bold text-purple-500">3</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Three</h3>
+                            <p class="text-xs text-gray-500">三</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-green-100 text-green-600 rounded-full">已学</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="word-card flex items-center bg-white">
+                        <div class="mr-3 w-16 h-16 rounded-xl bg-green-100 flex items-center justify-center">
+                            <span class="text-3xl font-bold text-green-500">4</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Four</h3>
+                            <p class="text-xs text-gray-500">四</p>
+                            <div class="flex items-center mt-1">
+                                <span class="text-xs px-2 py-0.5 bg-blue-100 text-blue-600 rounded-full">新词</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部导航栏 -->
+        <iframe src="components/bottom_nav.html?page=vocabulary" class="w-full border-none fixed bottom-0 left-0 right-0" style="height: 95px; z-index: 50;"></iframe>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>少儿学习单词APP - 原型展示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f5f7fa;
+        }
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background-color: white;
+            border-radius: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            border: 12px solid #121212;
+        }
+        .notch {
+            position: absolute;
+            width: 180px;
+            height: 30px;
+            background-color: #121212;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            z-index: 100;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body class="p-8">
+    <h1 class="text-3xl font-bold text-center mb-8">少儿学习单词APP - 原型页面展示</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <!-- 登录页 -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <iframe src="src/pages/login.html"></iframe>
+            </div>
+            <p class="mt-4 text-lg font-medium">登录页</p>
+        </div>
+        
+        <!-- 注册页 -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <iframe src="src/pages/signup.html"></iframe>
+            </div>
+            <p class="mt-4 text-lg font-medium">注册页</p>
+        </div>
+        
+        <!-- 首页/学习中心 -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <iframe src="src/pages/home.html"></iframe>
+            </div>
+            <p class="mt-4 text-lg font-medium">首页/学习中心</p>
+        </div>
+        
+        <!-- 单词列表/词库 -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <iframe src="src/pages/vocabulary.html"></iframe>
+            </div>
+            <p class="mt-4 text-lg font-medium">单词列表/词库</p>
+        </div>
+        
+        <!-- 单词详情 -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <iframe src="src/pages/word_detail.html"></iframe>
+            </div>
+            <p class="mt-4 text-lg font-medium">单词详情</p>
+        </div>
+        
+        <!-- 游戏中心 -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <iframe src="src/pages/games.html"></iframe>
+            </div>
+            <p class="mt-4 text-lg font-medium">游戏中心</p>
+        </div>
+        
+        <!-- 单词配对游戏 -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <iframe src="src/pages/game_matching.html"></iframe>
+            </div>
+            <p class="mt-4 text-lg font-medium">单词配对游戏</p>
+        </div>
+        
+        <!-- 游戏结果 -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <iframe src="src/pages/game_result.html"></iframe>
+            </div>
+            <p class="mt-4 text-lg font-medium">游戏结果</p>
+        </div>
+        
+        <!-- 学习进度 -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <iframe src="src/pages/progress.html"></iframe>
+            </div>
+            <p class="mt-4 text-lg font-medium">学习进度</p>
+        </div>
+        
+        <!-- 个人中心 -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <iframe src="src/pages/me.html"></iframe>
+            </div>
+            <p class="mt-4 text-lg font-medium">个人中心</p>
+        </div>
+        
+        <!-- 设置页面 -->
+        <div class="flex flex-col items-center">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <iframe src="src/pages/settings.html"></iframe>
+            </div>
+            <p class="mt-4 text-lg font-medium">设置页面</p>
+        </div>
+    </div>
+</body>
+</html> 

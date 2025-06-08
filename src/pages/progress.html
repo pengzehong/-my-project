@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习进度 - 少儿学习单词APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body class="bg-gray-50 h-screen">
+    <div class="page-container">
+        <!-- 顶部状态栏 -->
+        <iframe src="components/status_bar.html" class="w-full border-none" style="height: 35px;"></iframe>
+        
+        <!-- 头部 -->
+        <div class="bg-gradient-to-r from-green-500 to-teal-500 text-white p-6">
+            <h1 class="text-2xl font-bold mb-1">学习进度</h1>
+            <p class="text-white text-opacity-90 mb-4">跟踪你的学习成就</p>
+            
+            <!-- 进度汇总 -->
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="text-center">
+                        <p class="font-bold text-3xl text-green-500">32</p>
+                        <p class="text-xs text-gray-600">已学单词</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-bold text-3xl text-blue-500">8</p>
+                        <p class="text-xs text-gray-600">学习天数</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-bold text-3xl text-amber-500">58</p>
+                        <p class="text-xs text-gray-600">收集星星</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <!-- 本周学习统计 -->
+            <div class="mb-6 p-4">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4">本周学习统计</h2>
+                
+                <div class="bg-white rounded-xl p-4 shadow-sm">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-600">学习天数</span>
+                        <span class="text-sm font-medium">5/7天</span>
+                    </div>
+                    
+                    <div class="flex justify-between gap-1 mb-4">
+                        <div class="bg-green-500 h-10 rounded-lg flex-1 flex items-center justify-center text-white text-xs">
+                            一
+                        </div>
+                        <div class="bg-green-500 h-10 rounded-lg flex-1 flex items-center justify-center text-white text-xs">
+                            二
+                        </div>
+                        <div class="bg-green-500 h-10 rounded-lg flex-1 flex items-center justify-center text-white text-xs">
+                            三
+                        </div>
+                        <div class="bg-gray-100 h-10 rounded-lg flex-1 flex items-center justify-center text-gray-400 text-xs">
+                            四
+                        </div>
+                        <div class="bg-green-500 h-10 rounded-lg flex-1 flex items-center justify-center text-white text-xs">
+                            五
+                        </div>
+                        <div class="bg-green-500 h-10 rounded-lg flex-1 flex items-center justify-center text-white text-xs">
+                            六
+                        </div>
+                        <div class="bg-gray-100 h-10 rounded-lg flex-1 flex items-center justify-center text-gray-400 text-xs">
+                            日
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="bg-yellow-100 py-1 px-3 rounded-full text-xs text-yellow-700 font-medium">
+                            <i class="fas fa-fire mr-1"></i>
+                            5天连续学习
+                        </div>
+                        <div class="text-xs text-gray-500">目标: 7天</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 词汇掌握情况 -->
+            <div class="mb-6 p-4">
+                <h2 class="text-lg font-semibold text-gray-800 mb-4">词汇掌握情况</h2>
+                
+                <div class="bg-white rounded-xl p-4 shadow-sm">
+                    <!-- 动物单词 -->
+                    <div class="mb-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-paw text-amber-500 mr-2"></i>
+                                <span class="text-gray-700 font-medium">动物单词</span>
+                            </div>
+                            <span class="text-sm font-medium">8/20</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-amber-500 h-2.5 rounded-full" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 水果单词 -->
+                    <div class="mb-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-apple-alt text-red-500 mr-2"></i>
+                                <span class="text-gray-700 font-medium">水果单词</span>
+                            </div>
+                            <span class="text-sm font-medium">12/15</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-red-500 h-2.5 rounded-full" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 颜色单词 -->
+                    <div class="mb-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-palette text-purple-500 mr-2"></i>
+                                <span class="text-gray-700 font-medium">颜色单词</span>
+                            </div>
+                            <span class="text-sm font-medium">7/10</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-purple-500 h-2.5 rounded-full" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 数字单词 -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="flex items-center">
+                                <i class="fas fa-hashtag text-blue-500 mr-2"></i>
+                                <span class="text-gray-700 font-medium">数字单词</span>
+                            </div>
+                            <span class="text-sm font-medium">5/12</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5">
+                            <div class="bg-blue-500 h-2.5 rounded-full" style="width: 42%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部导航栏 -->
+        <iframe src="components/bottom_nav.html?page=progress" class="w-full border-none fixed bottom-0 left-0 right-0" style="height: 95px; z-index: 50;"></iframe>
+    </div>
+</body>
+</html> 

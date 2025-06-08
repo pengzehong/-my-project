@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏中心 - 少儿学习单词APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body class="bg-gray-50 h-screen">
+    <div class="page-container">
+        <!-- 顶部状态栏 -->
+        <iframe src="components/status_bar.html" class="w-full border-none" style="height: 35px;"></iframe>
+        
+        <!-- 头部 -->
+        <div class="bg-gradient-to-r from-purple-500 to-indigo-500 text-white pt-4 pb-6 px-6 rounded-b-3xl shadow-md">
+            <h1 class="text-2xl font-bold mb-1">游戏中心</h1>
+            <p class="text-white text-opacity-90">通过游戏轻松学习单词</p>
+            
+            <!-- 游戏统计 -->
+            <div class="bg-white bg-opacity-20 rounded-2xl p-4 mt-4 backdrop-blur-sm">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="font-semibold">今日任务完成情况</h3>
+                    <span class="text-sm">1/3</span>
+                </div>
+                
+                <div class="w-full bg-white bg-opacity-30 rounded-full h-3">
+                    <div class="bg-yellow-300 h-3 rounded-full" style="width: 33%"></div>
+                </div>
+                
+                <div class="flex justify-between mt-3 text-xs">
+                    <div class="text-center">
+                        <p class="font-bold text-2xl">15</p>
+                        <p>累计游戏</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-bold text-2xl">42</p>
+                        <p>获得星星</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="font-bold text-2xl">5</p>
+                        <p>单词题库</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <!-- 推荐游戏 -->
+            <div class="mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-star text-amber-500 mr-2"></i>
+                    推荐游戏
+                </h2>
+                
+                <div class="overflow-x-auto pb-4">
+                    <div class="flex space-x-4">
+                        <a href="game_matching.html" class="kid-card w-48 flex-shrink-0">
+                            <div class="h-28 rounded-t-2xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1614743758466-e569f4791116?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="单词配对" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-3">
+                                <h3 class="font-bold text-gray-800 mb-1">单词配对</h3>
+                                <p class="text-xs text-gray-500 mb-2">找出对应的单词和图片</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs text-yellow-500">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </span>
+                                    <span class="text-xs text-gray-500">4-6岁</span>
+                                </div>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="kid-card w-48 flex-shrink-0">
+                            <div class="h-28 rounded-t-2xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1584824486516-0555a07fc511?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="气球爆破" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-3">
+                                <h3 class="font-bold text-gray-800 mb-1">气球爆破</h3>
+                                <p class="text-xs text-gray-500 mb-2">击中正确单词的气球</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-xs text-yellow-500">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                    <span class="text-xs text-gray-500">5-7岁</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 全部游戏 -->
+            <div class="mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-gamepad text-blue-500 mr-2"></i>
+                    全部游戏
+                </h2>
+                
+                <!-- 游戏分类标签 -->
+                <div class="flex overflow-x-auto py-3 space-x-2 mb-4">
+                    <button class="bg-blue-500 text-white rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap flex-shrink-0">全部</button>
+                    <button class="bg-white text-gray-700 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap shadow-sm flex-shrink-0">益智</button>
+                    <button class="bg-white text-gray-700 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap shadow-sm flex-shrink-0">记忆力</button>
+                    <button class="bg-white text-gray-700 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap shadow-sm flex-shrink-0">拼写</button>
+                    <button class="bg-white text-gray-700 rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap shadow-sm flex-shrink-0">听力</button>
+                </div>
+                
+                <!-- 游戏列表 -->
+                <div class="grid grid-cols-1 gap-4">
+                    <!-- 单词配对游戏 -->
+                    <a href="game_matching.html" class="bg-white rounded-xl overflow-hidden shadow-sm flex">
+                        <div class="w-24 h-24 flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1614743758466-e569f4791116?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="单词配对" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-3 flex-1">
+                            <h3 class="font-bold text-gray-800 mb-1 flex items-center">
+                                单词配对
+                                <span class="ml-2 text-xs bg-yellow-400 text-yellow-800 px-2 py-0.5 rounded-full font-medium">热门</span>
+                            </h3>
+                            <p class="text-xs text-gray-500 mb-2">找出对应的单词和图片</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-yellow-500">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="text-xs px-2 py-1 bg-blue-100 text-blue-600 rounded-full">益智</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- 气球爆破游戏 -->
+                    <a href="#" class="bg-white rounded-xl overflow-hidden shadow-sm flex">
+                        <div class="w-24 h-24 flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1584824486516-0555a07fc511?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="气球爆破" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-3 flex-1">
+                            <h3 class="font-bold text-gray-800 mb-1">气球爆破</h3>
+                            <p class="text-xs text-gray-500 mb-2">击中正确单词的气球</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-yellow-500">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <span class="text-xs px-2 py-1 bg-green-100 text-green-600 rounded-full">记忆力</span>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <!-- 字母拖拽游戏 -->
+                    <a href="#" class="bg-white rounded-xl overflow-hidden shadow-sm flex">
+                        <div class="w-24 h-24 flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1555601568-c9e6f328489b?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="字母拖拽" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-3 flex-1">
+                            <h3 class="font-bold text-gray-800 mb-1">字母拖拽</h3>
+                            <p class="text-xs text-gray-500 mb-2">拖拽字母完成单词拼写</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-yellow-500">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <span class="text-xs px-2 py-1 bg-purple-100 text-purple-600 rounded-full">拼写</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部导航栏 -->
+        <iframe src="components/bottom_nav.html?page=games" class="w-full border-none fixed bottom-0 left-0 right-0" style="height: 95px; z-index: 50;"></iframe>
+    </div>
+</body>
+</html> 

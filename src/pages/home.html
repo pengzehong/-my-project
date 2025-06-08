@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 少儿学习单词APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 h-screen">
+    <div class="page-container">
+        <!-- 顶部状态栏 -->
+        <iframe src="components/status_bar.html" class="w-full border-none" style="height: 35px;"></iframe>
+        
+        <!-- 顶部问候 -->
+        <div class="bg-gradient-to-r from-pink-500 to-purple-500 text-white pt-4 pb-6 px-6 rounded-b-3xl shadow-md">
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h1 class="text-2xl font-bold">你好，小明！</h1>
+                    <p class="text-white text-opacity-90">今天我们一起学习新单词吧！</p>
+                </div>
+                <div class="w-14 h-14 bg-white rounded-full overflow-hidden border-2 border-white">
+                    <img src="https://images.unsplash.com/photo-1588620555478-c00075058d91?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="用户头像" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <!-- 学习进度摘要 -->
+            <div class="bg-white bg-opacity-20 rounded-2xl p-4 backdrop-blur-sm">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="font-medium">本周学习进度</span>
+                    <span class="text-sm">5/7天</span>
+                </div>
+                <div class="w-full bg-white bg-opacity-30 rounded-full h-3">
+                    <div class="bg-yellow-300 h-3 rounded-full" style="width: 71%"></div>
+                </div>
+                <div class="flex justify-between mt-3 text-xs">
+                    <div>
+                        <p class="font-bold text-2xl">12</p>
+                        <p>已学单词</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-2xl">25</p>
+                        <p>总复习次数</p>
+                    </div>
+                    <div>
+                        <p class="font-bold text-2xl">3</p>
+                        <p>连续学习(天)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <!-- 今日学习计划 -->
+            <div class="mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-calendar-check text-pink-500 mr-2"></i>
+                    今日学习计划
+                </h2>
+                
+                <div class="kid-card p-4">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-sm text-gray-500">每日任务 2/3</span>
+                        <span class="badge">奖励: 🌟×5</span>
+                    </div>
+                    
+                    <!-- 任务列表 -->
+                    <div class="space-y-3">
+                        <div class="flex items-center p-3 bg-green-50 rounded-xl">
+                            <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-500 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium">学习5个新单词</p>
+                                <div class="w-full bg-gray-200 rounded-full h-2 mt-1">
+                                    <div class="bg-green-400 h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="ml-2 text-green-500">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-3 bg-green-50 rounded-xl">
+                            <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-500 mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium">复习昨天的单词</p>
+                                <div class="w-full bg-gray-200 rounded-full h-2 mt-1">
+                                    <div class="bg-green-400 h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="ml-2 text-green-500">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center p-3 bg-blue-50 rounded-xl">
+                            <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-500 mr-3">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-sm font-medium">完成一个学习游戏</p>
+                                <div class="w-full bg-gray-200 rounded-full h-2 mt-1">
+                                    <div class="bg-blue-400 h-2 rounded-full" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            <button class="ml-2 bg-blue-500 text-white text-xs py-1 px-3 rounded-full">
+                                去完成
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 热门学习主题 -->
+            <div class="mb-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-fire text-orange-500 mr-2"></i>
+                    热门学习主题
+                </h2>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="kid-card p-4 flex items-center bg-gradient-to-r from-blue-400 to-blue-500 text-white">
+                        <div class="mr-3 animate-bounce-soft">
+                            <img src="https://images.unsplash.com/photo-1577337076867-2dd9d4edfd4c?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-12 h-12 object-cover rounded-xl" alt="动物">
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-1">动物单词</h3>
+                            <p class="text-xs text-white text-opacity-80">20个趣味单词</p>
+                        </div>
+                    </div>
+                    
+                    <div class="kid-card p-4 flex items-center bg-gradient-to-r from-purple-400 to-purple-500 text-white">
+                        <div class="mr-3 animate-bounce-soft">
+                            <img src="https://images.unsplash.com/photo-1528459709161-157d40a2f7fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-12 h-12 object-cover rounded-xl" alt="水果">
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-1">水果单词</h3>
+                            <p class="text-xs text-white text-opacity-80">15个甜蜜单词</p>
+                        </div>
+                    </div>
+                    
+                    <div class="kid-card p-4 flex items-center bg-gradient-to-r from-green-400 to-green-500 text-white">
+                        <div class="mr-3 animate-bounce-soft">
+                            <img src="https://images.unsplash.com/photo-1559381916-3e61f814f9b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-12 h-12 object-cover rounded-xl" alt="颜色">
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-1">颜色单词</h3>
+                            <p class="text-xs text-white text-opacity-80">10个绚丽单词</p>
+                        </div>
+                    </div>
+                    
+                    <div class="kid-card p-4 flex items-center bg-gradient-to-r from-pink-400 to-pink-500 text-white">
+                        <div class="mr-3 animate-bounce-soft">
+                            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" class="w-12 h-12 object-cover rounded-xl" alt="数字">
+                        </div>
+                        <div>
+                            <h3 class="font-bold mb-1">数字单词</h3>
+                            <p class="text-xs text-white text-opacity-80">12个基础单词</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 推荐学习游戏 -->
+            <div>
+                <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fas fa-puzzle-piece text-purple-500 mr-2"></i>
+                    推荐学习游戏
+                </h2>
+                
+                <div class="flex overflow-x-auto pb-4 -mx-4 px-4 space-x-4 hide-scrollbar">
+                    <div class="kid-card w-48 flex-shrink-0">
+                        <div class="h-28 rounded-t-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="单词配对" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-gray-800 mb-1">单词配对</h3>
+                            <p class="text-xs text-gray-500 mb-2">找出对应的单词和图片</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-yellow-500">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </span>
+                                <span class="text-xs text-gray-500">4-6岁</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="kid-card w-48 flex-shrink-0">
+                        <div class="h-28 rounded-t-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1555601568-c9e6f328489b?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="单词拼写" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-gray-800 mb-1">字母拖拽</h3>
+                            <p class="text-xs text-gray-500 mb-2">拖拽字母完成单词拼写</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-yellow-500">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <span class="text-xs text-gray-500">5-7岁</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="kid-card w-48 flex-shrink-0">
+                        <div class="h-28 rounded-t-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1559131583-f88a6505d914?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="单词气球" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-3">
+                            <h3 class="font-bold text-gray-800 mb-1">单词气球</h3>
+                            <p class="text-xs text-gray-500 mb-2">击破正确单词的气球</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-yellow-500">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                                <span class="text-xs text-gray-500">4-8岁</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部导航栏 -->
+        <iframe src="components/bottom_nav.html?page=home" class="w-full border-none fixed bottom-0 left-0 right-0" style="height: 95px; z-index: 50;"></iframe>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - 少儿学习单词APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+</head>
+<body class="bg-gray-50 h-screen">
+    <div class="page-container">
+        <!-- 顶部状态栏 -->
+        <iframe src="components/status_bar.html" class="w-full border-none" style="height: 35px;"></iframe>
+        
+        <!-- 头部导航 -->
+        <div class="px-5 pt-3 pb-3 bg-white shadow-sm flex items-center">
+            <a href="login.html" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 mr-3">
+                <i class="fas fa-chevron-left text-gray-600"></i>
+            </a>
+            <h1 class="text-xl font-bold text-gray-800">创建账号</h1>
+        </div>
+        
+        <div class="page-content p-6">
+            <h2 class="text-center text-lg font-semibold text-gray-800 mb-6">注册新用户，开启单词学习之旅</h2>
+            
+            <!-- 表单区域 -->
+            <form class="mb-6">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2" for="phone">
+                        手机号码
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-mobile-alt text-gray-400"></i>
+                        </div>
+                        <input class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" id="phone" type="tel" placeholder="请输入手机号码">
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2" for="verification">
+                        验证码
+                    </label>
+                    <div class="flex">
+                        <div class="relative flex-1 mr-3">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <i class="fas fa-shield-alt text-gray-400"></i>
+                            </div>
+                            <input class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" id="verification" type="text" placeholder="请输入验证码">
+                        </div>
+                        <button type="button" class="px-4 py-3 bg-pink-500 text-white rounded-lg whitespace-nowrap">
+                            获取验证码
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2" for="username">
+                        用户名
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-user text-gray-400"></i>
+                        </div>
+                        <input class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" id="username" type="text" placeholder="请设置用户名">
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2" for="password">
+                        密码
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-lock text-gray-400"></i>
+                        </div>
+                        <input class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" id="password" type="password" placeholder="请设置密码">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                            <i class="fas fa-eye-slash text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-medium mb-2" for="confirm-password">
+                        确认密码
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-lock text-gray-400"></i>
+                        </div>
+                        <input class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500" id="confirm-password" type="password" placeholder="请再次输入密码">
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                            <i class="fas fa-eye-slash text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-medium mb-2">
+                        设置学习者信息
+                    </label>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-gray-600 mb-1">年龄段</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                                <option>3-5岁</option>
+                                <option selected>6-8岁</option>
+                                <option>9-12岁</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs text-gray-600 mb-1">学习基础</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                                <option>初学者</option>
+                                <option selected>初级</option>
+                                <option>中级</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex items-center mb-6">
+                    <input id="agree-terms" type="checkbox" class="h-4 w-4 text-pink-500 border-gray-300 rounded">
+                    <label for="agree-terms" class="ml-2 block text-sm text-gray-700">
+                        我已阅读并同意<a href="#" class="text-pink-500 hover:underline">服务条款</a>和<a href="#" class="text-pink-500 hover:underline">隐私政策</a>
+                    </label>
+                </div>
+                
+                <a href="home.html" class="block w-full bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-bold py-3 rounded-lg text-center shadow-md hover:shadow-lg transition duration-200 mb-4">
+                    立即注册
+                </a>
+                
+                <div class="text-center">
+                    <span class="text-gray-600">已有账号?</span>
+                    <a href="login.html" class="text-pink-500 hover:underline ml-1">登录</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html> 

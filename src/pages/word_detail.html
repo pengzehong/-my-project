@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词详情 - 少儿学习单词APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .pronunciation-guide {
+            font-family: 'Arial', sans-serif;
+            font-style: italic;
+        }
+        .example-sentence {
+            border-left: 3px solid #FF6B6B;
+            padding-left: 12px;
+            margin: 8px 0;
+        }
+        .audio-wave {
+            animation: audio-wave 1.3s ease-in-out infinite;
+        }
+        @keyframes audio-wave {
+            0%, 100% {
+                transform: scaleY(0.5);
+            }
+            50% {
+                transform: scaleY(1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 h-screen">
+    <div class="page-container">
+        <!-- 顶部状态栏 -->
+        <iframe src="components/status_bar.html" class="w-full border-none" style="height: 35px;"></iframe>
+        
+        <!-- 头部导航 -->
+        <div class="px-5 pt-3 pb-3 bg-white shadow-sm flex items-center">
+            <a href="vocabulary.html" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 mr-3">
+                <i class="fas fa-chevron-left text-gray-600"></i>
+            </a>
+            <h1 class="text-xl font-bold text-gray-800">单词详情</h1>
+            <div class="ml-auto flex gap-3">
+                <button class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
+                    <i class="far fa-heart text-gray-600"></i>
+                </button>
+                <button class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100">
+                    <i class="fas fa-share-alt text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="page-content px-5 py-4">
+            <!-- 单词展示卡片 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm mb-6">
+                <!-- 单词图片 -->
+                <div class="h-48 overflow-hidden bg-blue-50 flex items-center justify-center">
+                    <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full object-cover" alt="Panda">
+                </div>
+                
+                <!-- 单词信息 -->
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h2 class="text-3xl font-bold text-gray-800">Panda</h2>
+                        <button class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center">
+                            <i class="fas fa-volume-up text-pink-500"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="flex items-center mb-4">
+                        <span class="pronunciation-guide text-gray-600 mr-4">/ˈpændə/</span>
+                        <span class="text-gray-500">熊猫</span>
+                    </div>
+                    
+                    <!-- 发音动画 -->
+                    <div class="flex items-end h-12 gap-1 mb-4">
+                        <div class="w-1 bg-pink-300 h-4 audio-wave" style="animation-delay: 0s"></div>
+                        <div class="w-1 bg-pink-400 h-6 audio-wave" style="animation-delay: 0.2s"></div>
+                        <div class="w-1 bg-pink-500 h-8 audio-wave" style="animation-delay: 0.1s"></div>
+                        <div class="w-1 bg-pink-600 h-10 audio-wave" style="animation-delay: 0.2s"></div>
+                        <div class="w-1 bg-pink-500 h-8 audio-wave" style="animation-delay: 0.3s"></div>
+                        <div class="w-1 bg-pink-400 h-6 audio-wave" style="animation-delay: 0.2s"></div>
+                        <div class="w-1 bg-pink-300 h-4 audio-wave" style="animation-delay: 0.3s"></div>
+                        <div class="w-1 bg-pink-400 h-6 audio-wave" style="animation-delay: 0.2s"></div>
+                        <div class="w-1 bg-pink-500 h-9 audio-wave" style="animation-delay: 0.1s"></div>
+                        <div class="w-1 bg-pink-400 h-7 audio-wave" style="animation-delay: 0.4s"></div>
+                        <div class="w-1 bg-pink-300 h-5 audio-wave" style="animation-delay: 0.3s"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 单词拼写 -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                    <i class="fas fa-spell-check text-pink-500 mr-2"></i>
+                    拼写练习
+                </h3>
+                
+                <div class="flex justify-center space-x-3 mb-4">
+                    <div class="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-sm border border-gray-200 text-lg font-bold text-gray-800">P</div>
+                    <div class="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-sm border border-gray-200 text-lg font-bold text-gray-800">A</div>
+                    <div class="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-sm border border-gray-200 text-lg font-bold text-gray-800">N</div>
+                    <div class="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-sm border border-gray-200 text-lg font-bold text-gray-800">D</div>
+                    <div class="w-12 h-12 flex items-center justify-center bg-white rounded-lg shadow-sm border border-gray-200 text-lg font-bold text-gray-800">A</div>
+                </div>
+                
+                <div class="text-center">
+                    <button class="bg-pink-500 text-white text-sm font-medium rounded-full px-6 py-2">
+                        开始拼写游戏
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 示例句子 -->
+            <div class="mb-6">
+                <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                    <i class="fas fa-quote-right text-pink-500 mr-2"></i>
+                    例句
+                </h3>
+                
+                <div class="bg-white rounded-xl p-4 shadow-sm">
+                    <div class="example-sentence">
+                        <p class="text-gray-800">The <span class="text-pink-500 font-bold">panda</span> eats bamboo.</p>
+                        <p class="text-gray-500 text-sm mt-1">熊猫吃竹子。</p>
+                    </div>
+                    
+                    <div class="example-sentence">
+                        <p class="text-gray-800">The <span class="text-pink-500 font-bold">panda</span> is a black and white animal.</p>
+                        <p class="text-gray-500 text-sm mt-1">熊猫是黑白相间的动物。</p>
+                    </div>
+                    
+                    <div class="example-sentence">
+                        <p class="text-gray-800">I saw a <span class="text-pink-500 font-bold">panda</span> at the zoo.</p>
+                        <p class="text-gray-500 text-sm mt-1">我在动物园看到了一只熊猫。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 相关单词 -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+                    <i class="fas fa-link text-pink-500 mr-2"></i>
+                    相关单词
+                </h3>
+                
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="word_detail.html" class="bg-white rounded-xl p-3 shadow-sm flex items-center">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-paw text-yellow-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-800">Animal</p>
+                            <p class="text-xs text-gray-500">动物</p>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="bg-white rounded-xl p-3 shadow-sm flex items-center">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-tree text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-800">Bamboo</p>
+                            <p class="text-xs text-gray-500">竹子</p>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="bg-white rounded-xl p-3 shadow-sm flex items-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-mountain text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-800">Forest</p>
+                            <p class="text-xs text-gray-500">森林</p>
+                        </div>
+                    </a>
+                    
+                    <a href="word_detail.html" class="bg-white rounded-xl p-3 shadow-sm flex items-center">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-otter text-purple-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium text-gray-800">Bear</p>
+                            <p class="text-xs text-gray-500">熊</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- 浮动按钮 -->
+            <div class="fixed bottom-24 right-6">
+                <button class="w-14 h-14 rounded-full bg-pink-500 text-white shadow-lg flex items-center justify-center">
+                    <i class="fas fa-play text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 底部导航栏 -->
+        <iframe src="components/bottom_nav.html?page=vocabulary" class="w-full border-none fixed bottom-0 left-0 right-0" style="height: 95px; z-index: 50;"></iframe>
+    </div>
+</body>
+</html> 

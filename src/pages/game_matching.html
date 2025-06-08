@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单词配对游戏 - 少儿学习单词APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <style>
+        .card {
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s;
+            transform-style: preserve-3d;
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-front {
+            background-image: linear-gradient(135deg, #FF6B6B 10%, #FFD166 100%);
+            color: white;
+            font-weight: bold;
+        }
+        .card-back {
+            background-color: white;
+            transform: rotateY(180deg);
+        }
+        .flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+        .matched {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 h-screen">
+    <div class="page-container">
+        <!-- 顶部状态栏 -->
+        <iframe src="components/status_bar.html" class="w-full border-none" style="height: 35px;"></iframe>
+        
+        <!-- 头部导航 -->
+        <div class="px-5 pt-3 pb-3 bg-white shadow-sm flex items-center">
+            <a href="games.html" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 mr-3">
+                <i class="fas fa-chevron-left text-gray-600"></i>
+            </a>
+            <h1 class="text-xl font-bold text-gray-800">单词配对</h1>
+            <div class="ml-auto flex gap-3">
+                <div class="flex items-center bg-pink-100 px-3 py-1 rounded-full">
+                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                    <span class="text-sm font-medium text-pink-700">42</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 游戏信息 -->
+        <div class="bg-gradient-to-r from-blue-400 to-indigo-500 p-4 text-white">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h2 class="font-semibold text-lg">动物单词</h2>
+                    <p class="text-xs text-white text-opacity-80">找出对应的单词和图片</p>
+                </div>
+                <div class="flex items-center">
+                    <div class="bg-white bg-opacity-30 rounded-lg px-3 py-1 mr-2">
+                        <span class="text-sm font-medium">步数: 12</span>
+                    </div>
+                    <div class="bg-white bg-opacity-30 rounded-lg px-3 py-1">
+                        <span class="text-sm font-medium">0:42</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-between items-center mt-3">
+                <div class="flex">
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                    <span class="star">★</span>
+                </div>
+                <span class="text-sm bg-white bg-opacity-20 rounded-lg px-3 py-1">第 1 关 / 3 关</span>
+            </div>
+        </div>
+        
+        <div class="page-content px-4 py-6">
+            <!-- 游戏卡片区域 -->
+            <div class="grid grid-cols-3 gap-3 mb-6">
+                <!-- Dog - Word -->
+                <div class="card h-28" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front flex items-center justify-center">
+                            <i class="fas fa-question text-3xl"></i>
+                        </div>
+                        <div class="card-back">
+                            <span class="text-lg font-bold text-gray-800">Dog</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dog - Image -->
+                <div class="card h-28" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front flex items-center justify-center">
+                            <i class="fas fa-question text-3xl"></i>
+                        </div>
+                        <div class="card-back">
+                            <img src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" class="w-full h-full object-cover" alt="Dog">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cat - Word -->
+                <div class="card h-28" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front flex items-center justify-center">
+                            <i class="fas fa-question text-3xl"></i>
+                        </div>
+                        <div class="card-back">
+                            <span class="text-lg font-bold text-gray-800">Cat</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cat - Image -->
+                <div class="card h-28" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front flex items-center justify-center">
+                            <i class="fas fa-question text-3xl"></i>
+                        </div>
+                        <div class="card-back">
+                            <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" class="w-full h-full object-cover" alt="Cat">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Panda - Word -->
+                <div class="card h-28" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front flex items-center justify-center">
+                            <i class="fas fa-question text-3xl"></i>
+                        </div>
+                        <div class="card-back">
+                            <span class="text-lg font-bold text-gray-800">Panda</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Panda - Image -->
+                <div class="card h-28" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front flex items-center justify-center">
+                            <i class="fas fa-question text-3xl"></i>
+                        </div>
+                        <div class="card-back">
+                            <img src="https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" class="w-full h-full object-cover" alt="Panda">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 提示信息 -->
+            <div class="bg-blue-50 rounded-xl p-4 mb-6">
+                <h3 class="font-semibold text-blue-700 mb-2 flex items-center">
+                    <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                    游戏提示
+                </h3>
+                <p class="text-sm text-blue-700">
+                    点击卡片，找出对应的单词和图片进行配对。配对成功后，卡片将保持翻开状态。找出所有配对即可通关！
+                </p>
+            </div>
+            
+            <!-- 操作按钮 -->
+            <div class="flex justify-between">
+                <button class="bg-white text-gray-700 rounded-full px-6 py-2 shadow-sm font-medium">
+                    <i class="fas fa-redo mr-2"></i>
+                    重新开始
+                </button>
+                
+                <button class="bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full px-6 py-2 shadow-sm font-medium">
+                    <i class="fas fa-lightbulb mr-2"></i>
+                    使用提示
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 底部导航栏 -->
+    <iframe src="components/bottom_nav.html?page=games" class="w-full border-none fixed bottom-0 left-0 right-0" style="height: 95px; z-index: 50;"></iframe>
+    
+    <!-- 简单的游戏逻辑 -->
+    <script>
+        // 这里可以添加卡片配对的游戏逻辑
+        // 实际应用中会更加完善
+    </script>
+</body>
+</html> 
